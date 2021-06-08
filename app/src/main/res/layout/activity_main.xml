@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card01"
+            android:layout_width="match_parent"
+            android:layout_height="400px"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/card">
+
+                <TextView
+                    android:id="@+id/txtName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@+id/card"
+                    app:layout_constraintTop_toTopOf="@+id/card"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="Név: "/>
+
+                <TextView
+                    android:id="@+id/txtName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/txtName1"
+                    app:layout_constraintTop_toTopOf="@+id/card"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="Árvaház költöztetése "/>
+
+                <TextView
+                    android:id="@+id/txtDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/card"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName1"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="Dátum: "/>
+
+                <TextView
+                    android:id="@+id/txtDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/txtDate1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName2"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="2021.06.13"/>
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/card"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDate1"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="Szerkesztés"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/btn1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDate2"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:text="Törlés"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/btn2"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName2"
+                    android:layout_marginStart="50px"
+                    android:layout_marginTop="50px"
+                    android:minHeight="50px"
+                    android:minWidth="50px"
+                    app:buttonTint = "@color/design_default_color_primary"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/card01"/>
+
+    </RelativeLayout>
+
+</ScrollView>
